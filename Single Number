@@ -1,0 +1,22 @@
+LEETCODE Problem number : 136
+LEETCODE Problem name : Single Number
+
+Approaches :
+1. using nested loop , TC => O(N^2)
+2. using Sorting , TC => O(N log n)
+3. Using XOR , TC => O(N)
+
+Code for the optimal solution -
+===================== Using XOR ===========================
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int x=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            x=x^nums[i];
+        }
+
+        return x;
+    }
+};
